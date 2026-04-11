@@ -11,7 +11,7 @@ export default function Navbar() {
             <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
                 <Link to="/" className="flex items-center gap-2 text-[var(--color-foreground)] ">
                     <Dumbbell className='w-6 h-6 text-[var(--color-accent)]' />
-                    <span className='font-semibold text-lg'>GYM AI PLANNER</span>
+                    <span className='font-semibold text-lg'>GymAI</span>
                 </Link>
 
                 <nav>
