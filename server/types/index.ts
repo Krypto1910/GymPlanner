@@ -6,7 +6,7 @@ export interface UserProfile {
     session_length: number; // in minutes
     equipment: string;
     injuries?: string | null;
-    preferredSplit: string;
+    preferred_split: string;
 }
 
 export interface PlanOverview {
@@ -28,12 +28,13 @@ export interface Exercise {
 
 export interface DaySchedule {
     day: string;
+    focus: string;
     exercises: Exercise[];
 }
 
 export interface TrainingPlan {
     id: string;
-    user_id: string;
+    userId: string;
     overview: PlanOverview;
     weeklySchedule: DaySchedule[];
     progression: string;

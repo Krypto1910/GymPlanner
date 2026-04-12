@@ -17,16 +17,14 @@ async function post(path: string, body: object) {
 }
 
 async function get(path: string) {
-    const res = await fetch(`${BASE_URL}/api${path}`, {
-        method: "GET",
-        headers: { "Content-Type": "application/json" }
-
-    });
-
+    const res = await fetch(`${BASE_URL}/api${path}`);
+    
     if (!res.ok) {
-        const errorData = await res.json();
-        throw new Error(errorData.message || "API request failed");
+        throw new Error(
+            (await res.json().catch(() => ({}))).error || "Request failed",
+        );
     }
+    return res.json();
 }
 
 export const api = {
@@ -34,6 +32,14 @@ export const api = {
         userId: string,
         profile: Omit<UserProfile, 'userId' | 'updatedAt'>
     ) => {
-        post("/profile", { userId, ...profile });
+        return post("/profile", { userId, ...profile });
+    },
+
+    generatePlan: (userId: string) => { 
+        return post("/plan/generate", { userId });
+    },
+
+    getCurrentPlan: (userId: string) => {
+        return get(`/plan/current?userId=${userId}`);
     }
 };
