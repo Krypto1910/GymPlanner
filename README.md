@@ -62,9 +62,8 @@ Users simply complete a short onboarding questionnaire, and the system generates
 - Neon Auth (`@neondatabase/neon-js`)  
 
 ### 🤖 AI Integration
-- Model: LFM2.5-1.2B-Instruct (free)
-- OpenRouter API  
-- LLM-based structured JSON generation  
+- LLM: LiquidAI LFM 2.5 (1.2B Instruct) via OpenRouter  
+- Generates structured JSON outputs with validation and error handling
 
 ---
 
