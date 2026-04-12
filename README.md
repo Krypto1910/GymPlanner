@@ -82,11 +82,11 @@ Users simply complete a short onboarding questionnaire, and the system generates
 ## 📌 API Endpoints
 
 ### Profile
-POST /api/profile
+- POST /api/profile
 
 ### Training Plan
-POST /api/plan/generate
-GET  /api/plan/current?userId=
+- POST /api/plan/generate
+- GET  /api/plan/current?userId=
 
 
 ---
@@ -94,9 +94,9 @@ GET  /api/plan/current?userId=
 ## ⚙️ Environment Variables
 
 Create a `.env` file:
-DATABASE_URL=your_database_url
-OPEN_ROUTER_KEY=your_openrouter_api_key
-BASE_URL=http://localhost:3001
+- DATABASE_URL=your_database_url
+- OPEN_ROUTER_KEY=your_openrouter_api_key
+- BASE_URL=http://localhost:3001
 
 ---
 
